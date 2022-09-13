@@ -1,4 +1,4 @@
-const AuthorModel=require("../models/authorModel")
+const AuthorModel= require("../models/authorModel")
 const jwt=  require("jsonwebtoken")
 
 //=========================================================================//
@@ -151,7 +151,7 @@ const authorLogin = async function (req, res) {
    "Blogging-Mini-Site(Project1)"
  );
  res.setHeader("x-api-key", token);
- res.send({ status: true, data: token });
+ res.status(200).send({ status: true, data: token });
  
  }
  catch (err) {

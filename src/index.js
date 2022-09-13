@@ -1,6 +1,5 @@
 const express = require('express');
 
-
 const route = require('./routes/route.js');
 const mongoose = require('mongoose');
 const app = express();
@@ -9,8 +8,7 @@ app.use(express.json());
 
 
 
-
-mongoose.connect("mongodb+srv://saurav438c:Bharat123@cluster0.ueecgjt.mongodb.net/?retryWrites=true&w=majority ", {
+mongoose.connect("mongodb+srv://NehaVerma009:A9CEHRbpunBJ90to@cluster0.r6xdcuv.mongodb.net/Neha-DB", {
     useNewUrlParser: true
 })
 .then( () => console.log("MongoDb is connected"))

@@ -361,19 +361,20 @@ const isValidObjectId = function (objectId) {
             .send({ status: false, message: `no blog found by ${blogId}` })
     }
 
-    await blogs.findByIdAndUpdate(
+   let deletedData= await blogs.findByIdAndUpdate(
         { _id: blogId },
-        { $set: { Deleted: true, deletedAt: Date.now() } },
+        { $set: { Deleted: true, deletedAt: Date() } },
         { new: true }
     );
+    let deletedAt=Date() 
 
     res
         .status(200)
-        .send({ status: true, message: "blog  not exist" });
+        .send({ status: true, msg: "data deleted successfully", data:deletedData,deletedAt});
 
 } catch (error) {
 
-    res.status(500).status({ status: false, message: error.message })
+    res.status(500).send({ status: false, message: error.message })
 
 }
 }
