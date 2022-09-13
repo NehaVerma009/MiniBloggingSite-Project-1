@@ -1,1 +1,1 @@
-# MiniBloggingSite-Project-1-
+# MiniBloggingSite-Project-1
